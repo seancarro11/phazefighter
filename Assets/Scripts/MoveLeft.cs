@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveDown : MonoBehaviour
+public class MoveLeft : MonoBehaviour
 {
     private float speed = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

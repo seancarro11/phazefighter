@@ -8,15 +8,15 @@ public class RepeatGameScreen : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider>().size.y;
+        repeatWidth = GetComponent<BoxCollider>().size.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < startPos.y - repeatWidth)
+        if (transform.position.x > 8.0f + repeatWidth)
         {
-            transform.position = startPos;
+            transform.position = new Vector3(-38.5f, 20.5f, Random.Range(12.47f, 12.5f));
         }
     }
 }
