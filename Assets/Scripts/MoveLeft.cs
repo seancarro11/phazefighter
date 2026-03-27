@@ -13,5 +13,9 @@ public class MoveLeft : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * Time.deltaTime * speed);
+        if (transform.position.x >= 17.25)
+        {
+            transform.position = new Vector3(transform.position.x - 45.25f, transform.position.y, transform.position.z);
+        }
     }
 }
