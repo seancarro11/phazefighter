@@ -5,9 +5,9 @@ public class PlayerControl : MonoBehaviour
 {
     public bool IsPlayerOne;
     public float PlayerSpeed;
+    public int PlayerHealth;
     void Start()
     {
-        
     }
 
     void Update()
@@ -62,16 +62,20 @@ public class PlayerControl : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Alpha7)) //Murder Button
             {
-                Debug.Log("1");
                 StartCoroutine(PlayerAttack());
-                Debug.Log("3");
             }
+        }
+
+
+
+        if (PlayerHealth == 0)
+        {
+            //Game Over
         }
     }
 
     IEnumerator PlayerAttack()
     {
-        Debug.Log("Murder :)");
         yield return null;
     }
 }
