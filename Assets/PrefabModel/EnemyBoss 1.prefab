@@ -984,6 +984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2907840952148476826}
   - component: {fileID: 6665411122447778093}
+  - component: {fileID: -1773855298318139089}
   m_Layer: 0
   m_Name: EnemyBoss 1
   m_TagString: Boss
@@ -1054,6 +1055,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1773855298318139089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385966873219507366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c91b4f68cfda840a4962b676224826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1 &3404430790817688291
 GameObject:
   m_ObjectHideFlags: 0

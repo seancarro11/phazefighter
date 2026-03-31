@@ -14,14 +14,13 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         SpawnFodderWave(waveNumber);
     }
 
     // Update is called once per frame
     void Update()
     {
-        fodderCount = FindObjectsByType<Fodder>(FindObjectsSortMode.None).Length;
+        fodderCount = GameObject.FindGameObjectsWithTag("Fodder").Length;
         if (fodderCount == 0)
         {
             waveNumber++;
@@ -39,7 +38,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnBoss()
     {
-        bossActive = FindObjectsByType<Boss>(FindObjectsSortMode.None).Length;
+        bossActive = GameObject.FindGameObjectsWithTag("Fodder").Length;
         if (bossActive == 0)
         {
             Instantiate(bossPrefab, new Vector3(12, 18, 13), bossPrefab.transform.rotation);
