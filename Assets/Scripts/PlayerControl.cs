@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
     public bool IsPlayerOne;
     public float PlayerSpeed;
     public int PlayerHealth;
+    public GameObject Projectile;
     void Start()
     {
     }
