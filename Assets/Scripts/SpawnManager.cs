@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i=0; i < fodderToSpawn; i++)
         {
-            Instantiate(fodderPrefab, new Vector3(7, 26, 13), fodderPrefab.transform.rotation);
+            Instantiate(fodderPrefab, new Vector3(-5, 26, 13), fodderPrefab.transform.rotation);
         }
     }
 
@@ -41,7 +41,8 @@ public class SpawnManager : MonoBehaviour
         bossActive = GameObject.FindGameObjectsWithTag("Fodder").Length;
         if (bossActive == 0)
         {
-            Instantiate(bossPrefab, new Vector3(12, 18, 13), bossPrefab.transform.rotation);
+            Instantiate(bossPrefab, new Vector3(-12, 28, 13), bossPrefab.transform.rotation);
+            bossActive++;
         }
     }
 

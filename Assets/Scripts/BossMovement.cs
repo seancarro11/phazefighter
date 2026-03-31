@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class BossMovement : MonoBehaviour
+public class FodderMovement : MonoBehaviour
 {
     public Vector3 pointB;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
 
     IEnumerator Start()
     {
