@@ -1291,6 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointB: {x: -5, y: 14, z: 12.75}
+  Projectile: {fileID: 5089040197027712109, guid: 1727ec0e0a6bc5542817ab7c3bae10f7, type: 3}
 --- !u!135 &1265175452546613685
 SphereCollider:
   m_ObjectHideFlags: 0

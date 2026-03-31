@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject Projectile;
     private bool OffCooldown = true;
     private Vector3 ProjectileOffset = new Vector3(0,0.275f,0);
+    public GameObject GameOverScreen;
 
     void Start()
     {
@@ -74,6 +75,7 @@ public class PlayerControl : MonoBehaviour
 
         if (PlayerHealth == 0)
         {
+            GameOverScreen.SetActive(true);
             //Game Over
         }
     }

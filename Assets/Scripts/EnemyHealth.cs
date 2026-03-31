@@ -20,12 +20,14 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        health--;
-        Destroy(other.gameObject);
-        if (health == 0)
+        if (other.gameObject.tag == "playerproj")
         {
-            Destroy(gameObject);
+            health--;
+            Destroy(other.gameObject);
+            if (health == 0)
+            {
+                Destroy(gameObject);
+            }
         }
-
     }
 }
