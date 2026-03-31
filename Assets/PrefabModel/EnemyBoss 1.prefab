@@ -986,6 +986,7 @@ GameObject:
   - component: {fileID: 6665411122447778093}
   - component: {fileID: -1773855298318139089}
   - component: {fileID: 4018076307425835727}
+  - component: {fileID: 4502464029687870710}
   m_Layer: 0
   m_Name: EnemyBoss 1
   m_TagString: Boss
@@ -1084,6 +1085,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointB: {x: -12, y: 16, z: 12.75}
+--- !u!65 &4502464029687870710
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385966873219507366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.809429, y: 1, z: 11.335794}
+  m_Center: {x: -0.067618236, y: 0, z: -4.8342466}
 --- !u!1 &3404430790817688291
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,19 +18,19 @@ public class PlayerControl : MonoBehaviour
     {
         if (IsPlayerOne) //Controls for Player 1
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) && transform.position.y < 25)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * PlayerSpeed);
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) && transform.position.x < 5.1f)
             {
                 transform.Translate(Vector3.back * Time.deltaTime * PlayerSpeed);
             }
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) && transform.position.y > 16)
             {
                 transform.Translate(Vector3.right * Time.deltaTime * PlayerSpeed);
             }
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) && transform.position.x > -4)
             {
                 transform.Translate(Vector3.forward * Time.deltaTime * PlayerSpeed);
             }
@@ -47,19 +47,19 @@ public class PlayerControl : MonoBehaviour
 
         else //Controls for Player 2
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) && transform.position.y < 25)
             {
                 transform.Translate(Vector3.left * Time.deltaTime * PlayerSpeed);
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x < 5.1f)
             {
                 transform.Translate(Vector3.back * Time.deltaTime * PlayerSpeed);
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow) && transform.position.y > 16)
             {
                 transform.Translate(Vector3.right * Time.deltaTime * PlayerSpeed);
             }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) && transform.position.x > -4)
             {
                 transform.Translate(Vector3.forward * Time.deltaTime * PlayerSpeed);
             }
