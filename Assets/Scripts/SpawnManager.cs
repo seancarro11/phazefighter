@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject bossPrefab;
     public int waveNumber = 1;
     public int fodderCount;
-    public int bossActive;
+    public int bossActive = 1;
     public Rigidbody fodderRb;
     public Rigidbody bossRb;
 
@@ -23,8 +23,14 @@ public class SpawnManager : MonoBehaviour
         fodderCount = GameObject.FindGameObjectsWithTag("Fodder").Length;
         if (fodderCount == 0)
         {
-            waveNumber++;
             SpawnFodderWave(waveNumber);
+        }
+
+        bossActive = GameObject.FindGameObjectsWithTag("Fodder").Length;
+        if (bossActive == 0)
+        {
+            waveNumber++;
+            SpawnBoss();
         }
     }
 
@@ -32,17 +38,15 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i=0; i < fodderToSpawn; i++)
         {
-            Instantiate(fodderPrefab, new Vector3(7, 26, 13), fodderPrefab.transform.rotation);
+            Instantiate(fodderPrefab, new Vector3(-5, 26, 13), fodderPrefab.transform.rotation);
         }
     }
 
     void SpawnBoss()
     {
-        bossActive = GameObject.FindGameObjectsWithTag("Fodder").Length;
-        if (bossActive == 0)
+        for (int i=0; i < 1; i++)
         {
-            Instantiate(bossPrefab, new Vector3(12, 18, 13), bossPrefab.transform.rotation);
+            Instantiate(bossPrefab, new Vector3(-7, 24, 13), bossPrefab.transform.rotation);
         }
     }
-
 }

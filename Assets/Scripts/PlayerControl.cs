@@ -7,6 +7,9 @@ public class PlayerControl : MonoBehaviour
     public float PlayerSpeed;
     public int PlayerHealth;
     public GameObject Projectile;
+    private bool OffCooldown = true;
+    private Vector3 ProjectileOffset = new Vector3(0,0.275f,0);
+
     void Start()
     {
     }
@@ -32,7 +35,7 @@ public class PlayerControl : MonoBehaviour
                 transform.Translate(Vector3.forward * Time.deltaTime * PlayerSpeed);
             }
 
-            if (Input.GetKey(KeyCode.Z)) //Murder Button
+            if (Input.GetKeyDown(KeyCode.Z) && OffCooldown == true) //Murder Button
             {
                 StartCoroutine(PlayerAttack());
             }
@@ -61,7 +64,7 @@ public class PlayerControl : MonoBehaviour
                 transform.Translate(Vector3.forward * Time.deltaTime * PlayerSpeed);
             }
 
-            if (Input.GetKey(KeyCode.Alpha7)) //Murder Button
+            if (Input.GetKeyDown(KeyCode.Alpha7) && OffCooldown == true) //Murder Button
             {
                 StartCoroutine(PlayerAttack());
             }
@@ -77,6 +80,12 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-        yield return null;
+        OffCooldown = false;
+        Debug.Log("Falsed");
+        Instantiate(Projectile, transform.position + ProjectileOffset, Quaternion.identity);
+        ProjectileOffset = ProjectileOffset * -1;
+        yield return new WaitForSeconds(0.25f);
+        OffCooldown = true;
+        Debug.Log("Trued");
     }
 }

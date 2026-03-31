@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 8460524885881860946}
   - component: {fileID: -9136948738685200781}
   - component: {fileID: -1297996436708414307}
+  - component: {fileID: 3140501355192120930}
   m_Layer: 0
   m_Name: EnemyFodder 1
   m_TagString: Fodder
@@ -1259,7 +1260,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-1297996436708414307
 MonoBehaviour:
@@ -1273,4 +1274,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c91b4f68cfda840a4962b676224826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1
+  fodderRb: {fileID: -9136948738685200781}
+  bossRb: {fileID: 0}
+--- !u!114 &3140501355192120930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418368830017065999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294455c095619294da961ca3738593ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointB: {x: -5, y: 14, z: 12.75}
