@@ -38,15 +38,12 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i=0; i < fodderToSpawn; i++)
         {
-            Instantiate(fodderPrefab, new Vector3(-5, 26, 13), fodderPrefab.transform.rotation);
+            Instantiate(fodderPrefab, new Vector3(-5, Random.Range(24,26), 13), fodderPrefab.transform.rotation);
         }
     }
 
     void SpawnBoss()
     {
-        for (int i=0; i < 1; i++)
-        {
             Instantiate(bossPrefab, new Vector3(-7, 24, 13), bossPrefab.transform.rotation);
-        }
     }
 }
