@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     private bool OffCooldown = true;
     private Vector3 ProjectileOffset = new Vector3(0,0.275f,0);
     public GameObject GameOverScreen;
+    public GameObject GameManager;
 
     void Start()
     {
@@ -89,5 +90,13 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         OffCooldown = true;
         Debug.Log("Trued");
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("test");
+        if (collision.gameObject.tag == "enemyproj")
+        {
+            PlayerHealth--;
+        }
     }
 }
