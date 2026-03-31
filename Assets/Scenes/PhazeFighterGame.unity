@@ -716,13 +716,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5537017829020355262, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 4505815300430292736, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 2674550920261178450, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 4680784345000305603, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 4672387347446735738, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 4579983921073920017, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 5741118913342959755, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 6115785265216476196, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 4606542320877991459, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 2670670144345605457, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 6087049539234895151, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 2118174600563704164, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 3922943833408470823, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 8540971225266443279, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 4916391475067140521, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 8531683589473197156, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+    - {fileID: 7342917205537779124, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3033263739471983366, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1070680340}
+    - targetCorrespondingSourceObject: {fileID: 3033263739471983366, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1070680342}
   m_SourcePrefab: {fileID: 100100000, guid: 60e2358d2d516524d8876ce81ff2b57d, type: 3}
 --- !u!1 &676955463
 GameObject:
@@ -1165,6 +1185,28 @@ MonoBehaviour:
   PlayerHealth: 1
   Projectile: {fileID: 8792491841420219583, guid: 5f39a2aa584bfcc4dbf40c4f592583f5, type: 3}
   GameOverScreen: {fileID: 1392857073}
+  GameManager: {fileID: 2002725300}
+--- !u!65 &1070680342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070680338}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5868454, y: 1, z: 6.418051}
+  m_Center: {x: -0.01001358, y: 0, z: -2.7090254}
 --- !u!1 &1392857073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1560,7 @@ MonoBehaviour:
   PlayerHealth: 3
   Projectile: {fileID: 4869666320683159021, guid: fca0a4a8998f1eb4288e90dd49065f98, type: 3}
   GameOverScreen: {fileID: 1392857073}
+  GameManager: {fileID: 2002725300}
 --- !u!1 &2002725300
 GameObject:
   m_ObjectHideFlags: 0
