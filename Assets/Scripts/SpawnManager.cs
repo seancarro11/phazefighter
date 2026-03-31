@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class SpawnManager : MonoBehaviour
     public int waveNumber = 1;
     public int fodderCount;
     public int bossActive;
+    public Rigidbody fodderRb;
+    public Rigidbody bossRb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
